@@ -29,3 +29,11 @@ function markAttendance() {
 }
 
 renderRecords();
+
+// Monthly attendance report feature
+function generateReport() {
+  const total = records.length;
+  const present = records.filter(r => r.status === "Present").length;
+  const absent = total - present;
+  alert(`Total Records: ${total}\nPresent: ${present}\nAbsent: ${absent}`);
+}
